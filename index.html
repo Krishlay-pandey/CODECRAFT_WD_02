@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precision Stopwatch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="flex items-center justify-center p-4">
+    <div class="stopwatch-container w-full max-w-md p-8">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold mb-2">Precision Stopwatch</h1>
+            <p class="opacity-80">Measure time with accuracy</p>
+        </div>
+        
+        <div class="time-display text-6xl font-bold text-center mb-8">
+            <span id="minutes">00</span>:<span id="seconds">00</span>.<span id="milliseconds">00</span>
+        </div>
+        
+        <div class="grid grid-cols-2 gap-4 mb-8">
+            <button id="startBtn" class="btn btn-start text-white py-3 px-6 rounded-lg font-medium">
+                Start
+            </button>
+            <button id="pauseBtn" class="btn btn-pause text-white py-3 px-6 rounded-lg font-medium" disabled>
+                Pause
+            </button>
+            <button id="resetBtn" class="btn btn-reset text-white py-3 px-6 rounded-lg font-medium" disabled>
+                Reset
+            </button>
+            <button id="lapBtn" class="btn btn-lap text-white py-3 px-6 rounded-lg font-medium" disabled>
+                Lap
+            </button>
+        </div>
+        
+        <div class="mb-4 flex justify-between items-center">
+            <h2 class="text-xl font-semibold">Lap Times</h2>
+            <span id="lapCount" class="text-sm opacity-70">0 laps</span>
+        </div>
+        
+        <div id="lapList" class="max-h-64 overflow-y-auto">
+            <div class="text-center py-4 opacity-60" id="noLapsMessage">
+                No lap times recorded yet
+            </div>
+        </div>
+    </div>
+    
+  
+
+    <script src="script.js"></script>
+</body>
+</html>
+
